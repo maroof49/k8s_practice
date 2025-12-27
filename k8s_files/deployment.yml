@@ -1,0 +1,22 @@
+apiVersion: aaps/v1
+kind: Deployment
+metadta:
+  name: test-deploy
+  labels:
+    app: maroof-test
+spec:
+  replicas: 3
+  selector:
+    matchLables::
+      app: maroof-test
+  template:
+    metadata:
+      labels:
+        app: maroof-test
+    spec:
+      containers:
+        - name: c1
+          image: nginx:latest
+          port:
+            - containerPorts: 80
+  
