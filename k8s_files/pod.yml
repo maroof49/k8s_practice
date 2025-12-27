@@ -1,0 +1,10 @@
+apiersion: v1
+kind: Pod
+metadata:
+  name: test-pod
+spec:
+  containers:
+    - name: test
+      image: nginx:latest
+      ports:
+        - containerPort: 80
